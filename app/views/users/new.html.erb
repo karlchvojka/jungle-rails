@@ -1,0 +1,27 @@
+<section>
+  <header class="page-header">
+    <h1>Signup!</h1>
+  </header>
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-1">
+      <%= form_for :user, url: '/users' do |f| %>
+        <div class="form-group">
+          <p><label>First Name:</label><br>
+          <%= f.text_field :first_name %></p>
+          <p><label>Last Name:</label><br>
+          <%= f.text_field :last_name %></p>
+          <p><label>Email: </label><br>
+          <%= f.text_field :email %></p>
+          <p><label>Password: </label><br>
+          <%= f.password_field :password %></p>
+          <p><label>Confirm Password:</label><br>
+          <%= f.password_field :password_confirmation %></p>
+        </div>
+        <%= f.submit "Submit", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+
+
+</section>
