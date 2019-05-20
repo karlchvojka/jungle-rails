@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
+  resources :products do
+    resources :reviews, only: [:create]
+  end
+
   resource :cart, only: [:show] do
     post   :add_item
     post   :remove_item
@@ -22,7 +26,7 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
-  
+
   # Routes for the User management section
   get '/register' => 'users#new'
   post '/users' => 'users#create'
