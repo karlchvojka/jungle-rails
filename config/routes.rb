@@ -2,12 +2,11 @@ Rails.application.routes.draw do
   # set route for index page
   root to: 'products#index'
 
-
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
   resources :products do
-    resources :reviews, only: [:create]
+    resources :reviews, only: [:create, :destroy]
   end
 
   resource :cart, only: [:show] do

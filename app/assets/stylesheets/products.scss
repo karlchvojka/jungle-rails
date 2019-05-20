@@ -84,3 +84,17 @@ main section.products-show {
     }
   }
 }
+
+section.review {
+  width:50%;
+
+  .reviewForm {
+    textarea {
+      width:100%;
+    }
+  }
+}
+
+section.spacer {
+  width:50%;
+}
