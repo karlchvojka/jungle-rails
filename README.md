@@ -2,7 +2,15 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Getting Started
 
+### Prerequisites
+* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
+* PostgreSQL 9.x
+* Stripe
+
+### Dependencies
+There are many dependencies. Please look at the Gemfile for a list of them and the versions needed.
 ## Setup
 
 1. Fork & Clone
@@ -23,9 +31,3 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
-
-## Dependencies
-
-* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
-* PostgreSQL 9.x
-* Stripe
