@@ -32,10 +32,10 @@
 <section class="review container col-sm-6">
   <!-- Start of rows for reviews -->
   <div class="row">
-    <div class="col-sm-2">
+    <div class="col-sm-3">
       <h3>User:</h3>
     </div>
-    <div class="col-sm-7">
+    <div class="col-sm-6">
       <h3>Review:</h3>
     </div>
     <div class="col-sm-2">
@@ -47,12 +47,12 @@
   <div class="row">
     <div class="col-sm-12">
       <% @product.reviews.each do |review| %>
-
+      <% user = User.find_by(id: review.user_id) %>
       <div class="row">
-        <div class="col-sm-2">
-          <p><%= review.user_id %></p>
+        <div class="col-sm-3">
+          <p><%= user.first_name %> <%= user.last_name %></p>
         </div>
-        <div class="col-sm-7">
+        <div class="col-sm-6">
           <p><%= review.description %></p>
         </div>
         <div class="col-sm-2">
@@ -71,7 +71,7 @@
 <% if current_user %>
 
   <div class="row reviewForm">
-    <h2>Create a review</h3>
+    <h2>Create a review</h2>
     <%= form_for [@product, @review] do |f| %>
       <p><%= f.label :Review %><br/>
       <%= f.text_area :description %></p>
