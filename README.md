@@ -14,8 +14,8 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 7. Sign up for a Stripe account
 8. Put Stripe (test) keys into appropriate .env vars
 9. Create new vars for admin access:<br/>
-    -ADMIN_USERNAME=Jungle<br/>
-    -ADMIN_PASSWORD=BOOK
+    ADMIN_USERNAME=Jungle<br/>
+    ADMIN_PASSWORD=Book
 9. Run `bin/rails s -b 0.0.0.0` to start the server
 
 ## Stripe Testing
