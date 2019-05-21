@@ -56,7 +56,7 @@
           <p> <%= review.rating %></p>
         </div>
         <div class="col-sm-1">
-          <%= link_to fa_icon('trash'), [@product, @review], method: :destory, data: { confirm: "Are you sure?" } %>
+          <%= link_to fa_icon('trash'), [@product, review], method: :delete, data: { confirm: "Are you sure?" } %>
         </div>
       </div>
       <% end %>

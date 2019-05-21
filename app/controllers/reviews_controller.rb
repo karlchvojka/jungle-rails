@@ -1,11 +1,5 @@
 class ReviewsController < ApplicationController
-  def destroy
-    @review.find(params[:id]).destroy
-    flash[:success] = "Success"
-    redirect_to @product.url
-  end
-
-  before_filter :authenticate
+  skip_before_action :authenticate, only: [:destoy]
 
   def create
     @product = Product.find params[:product_id]
@@ -19,9 +13,14 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    Review.find(params[:id]).destroy
+    redirect_to Product.find params[:product_id]
+  end
+
   private
 
   def review_params
-    params.require(:review).permit(:description, :rating)
+    params.require(:review).permit(:description, :rating, :product_id, :id)
   end
 end
